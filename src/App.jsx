@@ -10,11 +10,11 @@ function App() {
     <BrowserRouter>
       <Routes>
       
-        <Route/>
-        <Route/>
-        <Route/>
-        <Route/>
-        
+        <Route path="/" element={<h1>Home</h1>}/>
+        <Route path="/contact" element={<h1>Contacto</h1>}/>
+        <Route path="/dentist/:id" element={<h1>Detalle del dentista</h1>}/>
+        <Route path="/favs" element={<h1>Destacados</h1>}/>
+
      </Routes>
     </BrowserRouter>
   );
