@@ -20,9 +20,6 @@ export const Navbar = () => {
             <Link to="/Contact">Contact</Link>
           </li>
           <li>
-            <Link to="/Detail">Detail</Link>
-          </li>
-          <li>
             <Link to="/Favs">Favs</Link>
           </li>
                
