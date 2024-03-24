@@ -22,6 +22,7 @@ export const Home = () => {
       {
         dentists.map((dentist)=>{
           return <div key= {dentist.id}>
+            <img src="/images/doctor.jpg"  alt={`Foto de ${dentist.name}`} style={{width:"100%", height: 200, objectFit: "cover"}}/>
             <h2>{dentist.name}</h2>
             <h3>{dentist.username}</h3>
           </div>
