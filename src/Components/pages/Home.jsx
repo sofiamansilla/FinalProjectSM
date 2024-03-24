@@ -18,11 +18,15 @@ export const Home = () => {
   console.log(dentists);
   
   return (
-    <main className="" >
-      <h1>Home</h1>
-      <div className='card-grid'>
-        {/* Aqui deberias renderizar las cards */}
-      </div>
-    </main>
-  )
-}
+    <div>
+      {
+        dentists.map((dentist)=>{
+          return <div key= {dentist.id}>
+            <h2>{dentist.name}</h2>
+            <h3>{dentist.username}</h3>
+          </div>
+        })
+      }
+    </div>
+  );
+};
