@@ -29,7 +29,7 @@ export const Home = () => {
 
       {dentists.map((dentist)=>{
           return (
-            <DentistCard dentist={dentist}/>
+            <DentistCard dentist={dentist} key={dentist.id}/>
           );
         })}
     </div>

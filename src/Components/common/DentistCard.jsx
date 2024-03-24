@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 
 export const DentistCard = ({dentist}) => {
@@ -10,7 +11,6 @@ export const DentistCard = ({dentist}) => {
   return (
     <div 
     className="card" 
-    key = {dentist.id}
     style={{
       border: "2px solid black",
       width: "200px",
@@ -29,7 +29,9 @@ export const DentistCard = ({dentist}) => {
 
     <h2>{dentist.name}</h2>
     <h3>{dentist.username}</h3>
-    <h4>{dentist.id}</h4>
+    <Link to={`/Detail/{dentist.id}`}><button>Ver información del profesional</button></Link>
+
+
             {/* En cada card deberan mostrar en name - username y el id */}
 
 
