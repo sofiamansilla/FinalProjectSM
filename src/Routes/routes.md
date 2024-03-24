@@ -86,4 +86,9 @@ render(
     - [Página 3: Detalle del dentista (/dentist/:id)](#pagina-3-detalle-del-dentista)
     - [Página 4: Destacados (/favs)](#pagina-4-destacados)
 
+      <Route path="/" element={<h1>Home</h1>}/>
+      <Route path="/contact" element={<h1>Contacto</h1>}/>
+      <Route path="/dentist/:id" element={<h1>Detalle de denstista</h1>}/>
+      <Route path="/favs" element={<h1>Destacados</h1>}/>
+
 
