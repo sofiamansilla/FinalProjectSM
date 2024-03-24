@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link, Outlet} from "react-router-dom"
+import {Link} from "react-router-dom"
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
@@ -31,7 +31,7 @@ export const Navbar = () => {
 
         <button>Change theme</button>
 
-          <Outlet/>
+  
         
    
     </nav>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
-// import Card from '../Components/Card'
+import { DentistCard } from '../common/DentistCard';
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
@@ -18,16 +18,20 @@ export const Home = () => {
   console.log(dentists);
   
   return (
-    <div>
-      {
-        dentists.map((dentist)=>{
-          return <div key= {dentist.id}>
-            <img src="/images/doctor.jpg"  alt={`Foto de ${dentist.name}`} style={{width:"100%", height: 200, objectFit: "cover"}}/>
-            <h2>{dentist.name}</h2>
-            <h3>{dentist.username}</h3>
-          </div>
-        })
-      }
+    <div style={{
+      display: "flex",
+      flexWrap:"wrap",
+      justifyContent: 'space-evenly',
+      alignItems: "center",
+      gap: "30px",
+      width: "100%"
+    }}>
+
+      {dentists.map((dentist)=>{
+          return (
+            <DentistCard dentist={dentist}/>
+          );
+        })}
     </div>
   );
 };
