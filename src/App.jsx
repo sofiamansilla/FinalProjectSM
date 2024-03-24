@@ -24,6 +24,8 @@ function App() {
       
       </Route>
     
+        <Route  path="*" element={<h1>Error 404</h1>}/>
+        
     </Routes>
   
   </BrowserRouter>
