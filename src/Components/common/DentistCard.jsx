@@ -1,7 +1,7 @@
 import React from "react";
 
 
-export const DentistCard = (dentist) => {
+export const DentistCard = ({dentist}) => {
 
   // const addFav = ()=>{
   //   // Aqui iria la logica para agregar la Card en el localStorage
@@ -15,7 +15,8 @@ export const DentistCard = (dentist) => {
       border: "2px solid black",
       width: "200px",
       height: "300px",
-    }}>
+    }}
+    >
       <img 
         src="/images/doctor.jpg"  alt={`Foto de ${dentist.name}`}
         style={{
@@ -23,11 +24,14 @@ export const DentistCard = (dentist) => {
           height: 200, 
           objectFit: "cover"
     }}
+    
       />
-            {/* En cada card deberan mostrar en name - username y el id */}
+
     <h2>{dentist.name}</h2>
     <h3>{dentist.username}</h3>
     <h4>{dentist.id}</h4>
+            {/* En cada card deberan mostrar en name - username y el id */}
+
 
 
         {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */}
