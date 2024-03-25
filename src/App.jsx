@@ -1,10 +1,11 @@
 
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 import { Home } from "./Components/pages/home"
-import { Detail } from "./Components/pages/Detail";
-import { Contact } from "./Components/pages/Contact";
-import { Favs } from "./Components/pages/Favs";
-import { Layout } from "./Components/layouts";
+import { Contact } from "./Components/pages/contact";
+import { Detail } from "./Components/pages/detail";
+import { Favs } from "./Components/pages/favs";
+import { Layout  } from "./Components/layouts/Layout";
+
 import {Link} from "react-router-dom"
 
 
