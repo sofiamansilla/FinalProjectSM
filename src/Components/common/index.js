@@ -1,1 +1,2 @@
-export * from './common';
+export * from './dentistCard'
+export * from './form'

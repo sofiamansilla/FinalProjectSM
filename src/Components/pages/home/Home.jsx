@@ -1,7 +1,7 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
-import { DentistCard } from '../../common/DentistCard';
 import "./Home.style.css"
+import { DentistCard } from '../../common/dentistCard';
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 

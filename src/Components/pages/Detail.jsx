@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import {useParams} from "react-router-dom";
 import {Link} from "react-router-dom"
-import { getDentistById } from '../services/getDentistById';
+import { getDentistById } from '../../services/getDentistById';
 
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
