@@ -30,6 +30,7 @@ export const DentistCard = ({dentist}) => {
     <h2>{dentist.name}</h2>
     <h3>{dentist.username}</h3>
     <Link to={`/Dentist/${dentist.id}`}><button>Ver información del profesional</button></Link>
+    <button>Agregar a favoritos</button>
 
 
             {/* En cada card deberan mostrar en name - username y el id */}
