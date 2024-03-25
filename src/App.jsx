@@ -1,10 +1,10 @@
 
 import { BrowserRouter, Routes, Route} from "react-router-dom";
-import { Home } from "./Components/pages/Home";
+import { Home } from "./Components/pages/home"
 import { Detail } from "./Components/pages/Detail";
 import { Contact } from "./Components/pages/Contact";
 import { Favs } from "./Components/pages/Favs";
-import { Layout } from "./Components/layouts/Layout";
+import { Layout } from "./Components/layouts";
 import {Link} from "react-router-dom"
 
 
@@ -18,7 +18,7 @@ function App() {
 
       <Route element={<Layout/>}>
 
-        <Route  path="/" element={<Home/>}/>
+        <Route  path="/" element={ <Home/> }/>
         <Route  path="/Contact" element={<Contact/>}/>
         <Route  path="/Dentist/:id" element={<Detail/>}/>
         <Route  path="/Favs" element={<Favs/>}/>

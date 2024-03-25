@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
-import { DentistCard } from '../common/DentistCard';
+import { DentistCard } from '../../common/DentistCard';
+import "./Home.style.css"
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
@@ -15,17 +16,9 @@ export const Home = () => {
     .then(res => setDentists(res))
   }, [])
   
-  console.log(dentists);
   
   return (
-    <div style={{
-      display: "flex",
-      flexWrap:"wrap",
-      justifyContent: 'space-evenly',
-      alignItems: "center",
-      gap: "30px",
-      width: "100%"
-    }}>
+    <div className='container-cards'>
 
       {dentists.map((dentist)=>{
           return (
