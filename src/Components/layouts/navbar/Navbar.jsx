@@ -10,7 +10,6 @@ export const Navbar = () => {
    
    <nav>
 
-
         <ul>
           
           <li>  
@@ -27,8 +26,7 @@ export const Navbar = () => {
         </ul>
 
         <button>Change theme</button>
-
-  
+ 
         
    
     </nav>
