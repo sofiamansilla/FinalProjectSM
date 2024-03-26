@@ -51,7 +51,6 @@ export const Form = () => {
             ...user,
             email: e.target.value
         });
-        setHasError(false)
 
     }
     const onChangeName = (e) => {
@@ -81,7 +80,7 @@ export const Form = () => {
                     className='input-email'
                 />
            
-                <button>Enviar</button>
+                <button type="submit">Enviar</button>
             
             </form>
         }
