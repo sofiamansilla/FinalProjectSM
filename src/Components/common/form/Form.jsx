@@ -2,6 +2,8 @@
 import React, { useState } from 'react'
 import './Form.style.css'
 import { FormCard } from '../formCard'
+import { validateEmail } from '../../../services/validateEmail'
+import { validateFullName } from '../../../services/validateName'
 
 
 /**
@@ -21,7 +23,7 @@ export const Form = () => {
     const [user, setUser] = useState({
         name: '',
         email: '',
-    })
+    });
  
 
     const [showSuccess, setShowSuccess] = useState(false)
@@ -30,30 +32,35 @@ export const Form = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
    
-        if(user.name.length >= 5 && user.name[0]!=" "){
-            setShowSuccess(true)
-            setHasError(false)
-        } else {
+        if(!validateEmail (user.email)){
             setHasError(true)
+            return;
         }
-    }
+        if(!validateFullName(user.name)) {
+            setHasError(true);
+            return;
+        }
+    
+        setShowSuccess(true);
 
-    const onChangeName = (e) => {
-        setUser({
-            ...user,
-            name: e.target.value
-        })
 
-    }
-
-    const onChangeGame = (e) => {
+ 
+    };
+    const onChangeEmail = (e) => {
         setUser({
             ...user,
             email: e.target.value
-        })
+        });
+        setHasError(false)
 
     }
-
+    const onChangeName = (e) => {
+        setUser({
+          ...user,
+          name: e.target.value
+        });
+        setHasError(false)
+      }
 
   return (
     <div className='form-component'>
@@ -64,12 +71,14 @@ export const Form = () => {
                     placeholder='name' 
                     onChange={onChangeName}
                     value={user.name}
+                    className='input-name'
                 />
 
                 <input type="text" 
                     placeholder='email' 
-                    onChange={onChangeGame} 
+                    onChange={onChangeEmail} 
                     value={user.email}
+                    className='input-email'
                 />
            
                 <button>Enviar</button>
@@ -89,7 +98,8 @@ export const Form = () => {
         }
 
     </div>
-  )
-}
+  );
 
-console.log(FormCard);
+};
+
+
