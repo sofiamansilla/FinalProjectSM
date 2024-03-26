@@ -28,6 +28,22 @@ export const Form = () => {
 
     const [showSuccess, setShowSuccess] = useState(false)
     const [hasError, setHasError] = useState(false)
+    const [showError, setShowError] = useState(false)
+
+    const onChangeEmail = (e) => {
+        setUser({
+            ...user,
+            email: e.target.value
+        });
+
+    }
+    const onChangeName = (e) => {
+        setUser({
+          ...user,
+          name: e.target.value
+        });
+        setHasError(false)
+      }
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -46,20 +62,7 @@ export const Form = () => {
 
  
     };
-    const onChangeEmail = (e) => {
-        setUser({
-            ...user,
-            email: e.target.value
-        });
 
-    }
-    const onChangeName = (e) => {
-        setUser({
-          ...user,
-          name: e.target.value
-        });
-        setHasError(false)
-      }
 
   return (
     <div className='form-component'>
