@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import {useParams} from "react-router-dom";
 import {Link} from "react-router-dom"
 import { getDentistById } from '../../../services/getDentistById';
+import { ButtonReturnHome } from '../../common'
 
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
@@ -31,7 +32,12 @@ export const Detail = () => {
       <h2>Ciudad: {dentistSelected.address.city}</h2>  
       <h2>Compañia: {dentistSelected.company.name}</h2>
 
-      <Link to="/"><button>Volver a los otros profesionales</button></Link>
+      {/* <Link to="/"><button>Volver a los otros profesionales</button></Link> */}
+     
+<ButtonReturnHome/>
+
     </>
+
+    
   )
 }
