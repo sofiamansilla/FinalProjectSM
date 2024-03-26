@@ -10,7 +10,7 @@ export const DentistCard = ({dentist}) => {
 
   return (
     <div 
-    className="card" 
+    className="dentistCard-component" 
     style={{
       border: "2px solid black",
       width: "200px",
