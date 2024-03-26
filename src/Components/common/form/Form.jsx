@@ -92,32 +92,23 @@ export const Form = () => {
 
             
         }
-        {/* {showSuccess ? 
-            <>
-                <FormCard name={user.name} email={user.email}/>           
-            </>
-        :   <p>Ingresa tus datos para que podamos contactarte cuanto antes</p>}
-        {hasError ? 
+   
+
+        {showSuccess ? (
+            <p>
+                Gracias {user.name}, te contactaremos cuanto antes al email {user.email}
+            </p>
+        ) : (
+            <p>
+                Ingresa tus datos para que podamos contactarte cuanto antes
+            </p>
+        )}
+        
+        {hasError && (
             <p style={{color: 'red'}}>
                 Por favor verifique su información nuevamente
-            </p> 
-        : null
-        }  */}
-
-{showSuccess ? (
-        <p>
-          Gracias {user.name}, te contactaremos cuanto antes al email {user.email}
-        </p>
-      ) : (
-        <p>
-          Ingresa tus datos para que podamos contactarte cuanto antes
-        </p>
-      )}
-      {hasError && (
-        <p style={{color: 'red'}}>
-          Por favor verifique su información nuevamente
-        </p>
-      )}
+            </p>
+        )}
 
     </div>
   );

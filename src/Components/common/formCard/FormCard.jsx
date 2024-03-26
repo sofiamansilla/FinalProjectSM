@@ -13,7 +13,6 @@ export const FormCard = ({
   return (
     <div className="form-card">
     
-  <p>Gracias { name }, te contactaremos cuanto antes al email { email } </p>
   
 </div>
 
