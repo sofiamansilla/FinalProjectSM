@@ -48,17 +48,19 @@ export const Form = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
    
-        if(!validateEmail (user.email)){
-            setHasError(true)
-            return;
-        }
         if(!validateFullName(user.name)) {
             setHasError(true);
+            setShowError(true);
+            return;
+        }
+        if(!validateEmail (user.email)){
+            setHasError(true);
+            setShowError(false);
             return;
         }
     
-        setShowSuccess(true);
-
+    setShowSuccess(true);
+    setShowError(false);
 
  
     };
@@ -85,9 +87,12 @@ export const Form = () => {
            
                 <button type="submit">Enviar</button>
             
+              
             </form>
+
+            
         }
-        {showSuccess ? 
+        {/* {showSuccess ? 
             <>
                 <FormCard name={user.name} email={user.email}/>           
             </>
@@ -97,11 +102,29 @@ export const Form = () => {
                 Por favor verifique su información nuevamente
             </p> 
         : null
-        }
+        }  */}
+
+{showSuccess ? (
+        <p>
+          Gracias {user.name}, te contactaremos cuanto antes al email {user.email}
+        </p>
+      ) : (
+        <p>
+          Ingresa tus datos para que podamos contactarte cuanto antes
+        </p>
+      )}
+      {hasError && (
+        <p style={{color: 'red'}}>
+          Por favor verifique su información nuevamente
+        </p>
+      )}
 
     </div>
   );
 
 };
+
+
+
 
 
