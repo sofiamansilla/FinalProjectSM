@@ -1,13 +1,14 @@
 
-import { BrowserRouter, Routes, Route} from "react-router-dom";
+import { 
+  BrowserRouter, 
+  Routes, 
+  Route} from "react-router-dom";
 import { Home } from "./Components/pages/home"
 import { Contact } from "./Components/pages/contact";
 import { Detail } from "./Components/pages/detail";
 import { Favs } from "./Components/pages/favs";
 import { Layout  } from "./Components/layouts/Layout";
-
-import {Link} from "react-router-dom"
-
+import { NotFound } from "./Components/pages/notFound/NotFound";
 
 
 function App() {
@@ -26,9 +27,7 @@ function App() {
       
       </Route>
     
-        <Route  path="*" element={<Link to="/"><button>Ché, volvete a tu casa, este dentista no está de turno</button></Link>}/>
-
-
+        <Route  path="*" element={<NotFound/>}/>
         
     </Routes>
   

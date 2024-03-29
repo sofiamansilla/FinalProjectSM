@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import "./Home.style.css"
 import { DentistCard } from '../../common/dentistCard';
+import { getAllDentist } from '../../../services/getElementsApi';
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
@@ -11,11 +12,16 @@ export const Home = () => {
 
   useEffect(()=>{
 
-    fetch(`https://jsonplaceholder.typicode.com/users`)
-    .then(res => res.json())
-    .then(res => setDentists(res))
+    getAllDentist().then(res=>setDentists(res))
+
   }, [])
+
+  console.log(dentists);
   
+  if(dentists==null){
+    return;
+  }
+
   
   return (
     <div className='container-cards'>
