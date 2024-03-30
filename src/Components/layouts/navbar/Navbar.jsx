@@ -3,11 +3,16 @@ import {Link} from "react-router-dom"
 import "./Navbar.styles.css"
 import { useDentistStates } from '../../../Context/DentistContext'
 
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
+/**
+ * 
+ * @return {ReactComponent} Componente Navbar, barra de navegación, dirige a: Inicio, contacto y favoritos.
+ */
 
 export const Navbar = () => {
 
 const {state, dispatch} = useDentistStates()
+
+const darkModeClass = state.darkMode ? "layout-dark" : "layout";
 
   return ( 
    <nav className={"navbar"}>
@@ -27,7 +32,7 @@ const {state, dispatch} = useDentistStates()
           
         </ul>
 
-        <button 
+        {/* <button img='/images/ico-color-theme.png'
           alt="Botón para cambiar modo claro-oscuro" 
           onClick={
             ()=> dispatch({type: "CHANGUE_MODE"})
@@ -35,8 +40,12 @@ const {state, dispatch} = useDentistStates()
             Cambiar modo
         </button>
         
- 
-        
+  */}
+        <img className='icon-theme' 
+              onClick={()=> dispatch({type: "CHANGUE_MODE"})}
+              src="/images/ico-color-theme.png" 
+              alt="Cambiar tema" 
+          /> 
    
     </nav>
   )

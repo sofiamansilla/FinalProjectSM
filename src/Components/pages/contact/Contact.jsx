@@ -10,8 +10,7 @@ import "./Contact.styles.css"
 export const Contact = () => {
   return (
     <div className='contact-text'>
-      <strong>¿Necesitas más información?</strong>
-      <p>Ingresa tus datos y te escribiremos lo más pronto posible</p>
+      
 
       <Form/>
 

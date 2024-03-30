@@ -32,9 +32,13 @@
 .navbar ul li a:hover{
     color: #61bcd8;
 }
-button{
+
+
+.navbar .icon-theme{
     margin-left: auto;
-    padding: 5px;
+    padding: 4px;
+    width: 50px;
+
 }
 
 .layout-dark .navbar{
