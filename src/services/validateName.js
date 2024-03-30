@@ -1,3 +1,10 @@
+
+/**
+ * 
+ * @param {@} name 
+ * @return {ReactComponent} componente que valida el nombre con expresión regular
+ */
+
 export const validateFullName =(name)=> {
 
     const regex = /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖ]{2,}$/;

@@ -13,14 +13,21 @@ export const Footer = () => {
 
   const darkModeClass = state.darkMode ? "layout-dark" : "layout";
 
-  return (
-    <footer className="footer">
 
-        <img 
-          className="icono-DH" 
-          src="/images/DH.png" 
-          alt="DH Logo" />
-      
+  return (
+    
+    <footer className="footer">
+        
+          <a
+            href='https://www.digitalhouse.com/productos/programacion/certified-tech-developer'
+            target='_blank'
+            rel='noopener noreferrer'>
+              <img 
+                className="icono-DH" 
+                src="/images/DH.png" 
+                alt="DH Logo" />
+          </a>
+        
         <div 
           className="footer-social">
 

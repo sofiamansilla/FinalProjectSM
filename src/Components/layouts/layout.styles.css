@@ -18,4 +18,6 @@
 
 .layout-dark{
   background-color: rgb(163, 159, 159);
+  min-height: 100vh;
+  min-width: 100%;
 }

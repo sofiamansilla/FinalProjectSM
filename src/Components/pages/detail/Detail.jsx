@@ -5,7 +5,10 @@ import './Detail.styles.css'
 
 
 
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
+/**
+ * 
+ * @return {ReactComponent} Renderiza los datos individuales de cada dentista 
+ */
 
 export const Detail = () => {
  

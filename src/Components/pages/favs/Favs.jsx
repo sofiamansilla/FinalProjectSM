@@ -4,6 +4,9 @@ import { useDentistStates } from "../../../Context";
 import "./favs.styles.css";
 
 
+/**
+ * @return {ReactComponent} Componente que muestra a los dentistas marcados como favoritos y los elimina
+ */
 export const Favs = () => {
   const {state, dispatch} = useDentistStates();
 

@@ -5,6 +5,10 @@ import { Footer } from './footer'
 import './layout.styles.css'
 import { useDentistStates } from '../../Context/DentistContext'
 
+/**
+ * 
+ * @return {ReactComponent} Layout de la aplicación, genera el cambio de tema.
+ */
 export const Layout = () => {
 
   const {state, dispatch} = useDentistStates()

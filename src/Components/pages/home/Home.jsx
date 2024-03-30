@@ -4,11 +4,14 @@ import "./Home.style.css"
 import { DentistCard } from '../../common/dentistCard';
 import { getAllDentist } from '../../../services/getElementsApi';
 
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
+/**
+ * 
+ * @return {ReactComponent} Componente inicio que muestra a todos los dentistas
+ */
 
 export const Home = () => {
 
-  const [dentists, setDentists] = useState([]) //Array que almacenara los dentistas obtenidos desde la API
+  const [dentists, setDentists] = useState([])
 
   useEffect(()=>{
 

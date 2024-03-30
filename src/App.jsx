@@ -38,8 +38,7 @@ function App() {
     </DentistContext>
   </BrowserRouter>
 
-
-  );
+ );
 }
 
 export default App;

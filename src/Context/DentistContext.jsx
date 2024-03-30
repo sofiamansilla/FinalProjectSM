@@ -13,6 +13,12 @@ let initialState = {
     darkMode: false
 }
 
+/**
+ * 
+ * @param {@} state 
+ * @param {*} action 
+ * @return {ReactComponent}  Componente reducer
+ */
 const dentistReducer = (state, action)=>{
 
     switch(action.type){
@@ -42,6 +48,9 @@ const dentistReducer = (state, action)=>{
     }
 }
 
+/**
+ * @return {ReactComponent} El componente provider de dentista
+ */
 export const DentistContext = ({children}) =>{
     const [state, dispatch] = useReducer(dentistReducer, initialState)
 
@@ -57,4 +66,5 @@ export const DentistContext = ({children}) =>{
         </DentistStates.Provider>
     )
 }
+
 export const useDentistStates = () => useContext(DentistStates);
