@@ -10,6 +10,8 @@ import { useDentistStates } from "../../../Context";
 export const DentistCard = ({dentist, remove}) => {
  
   const {state, dispatch} = useDentistStates();
+
+  const darkModeClass = state.darkMode ? "layout-dark" : "layout";
   
   const onClickFavHandler=()=>{
     dispatch ({

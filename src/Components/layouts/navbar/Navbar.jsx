@@ -32,15 +32,6 @@ const darkModeClass = state.darkMode ? "layout-dark" : "layout";
           
         </ul>
 
-        {/* <button img='/images/ico-color-theme.png'
-          alt="Botón para cambiar modo claro-oscuro" 
-          onClick={
-            ()=> dispatch({type: "CHANGUE_MODE"})
-          }>
-            Cambiar modo
-        </button>
-        
-  */}
         <img className='icon-theme' 
               onClick={()=> dispatch({type: "CHANGUE_MODE"})}
               src="/images/ico-color-theme.png" 

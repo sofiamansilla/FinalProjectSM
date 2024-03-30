@@ -77,3 +77,16 @@
   margin: 0 auto;
   border-radius: 10px;
 }
+
+.layout-dark .dentistCard-component{
+  background-color: rgb(175, 123, 141);
+}
+
+.layout-dark .dentistCard-component .info-container{
+  background-color: #daa8b8;
+}
+
+.layout-dark .dentistCard-component .dentistCard-footer button{
+  background-color: rgb(187, 154, 187);
+  color: rgb(220, 227, 233);
+}

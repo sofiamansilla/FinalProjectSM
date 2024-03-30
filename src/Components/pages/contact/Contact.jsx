@@ -1,6 +1,7 @@
 import React from 'react'
 import { Form } from '../../common/form/Form'
 import "./Contact.styles.css"
+import { useDentistStates } from '../../../Context';
 
 /**
  * 
@@ -8,6 +9,12 @@ import "./Contact.styles.css"
  */
 
 export const Contact = () => {
+
+
+  const {state, dispatch} = useDentistStates();
+
+  const darkModeClass = state.darkMode ? "layout-dark" : "layout";
+
   return (
     <div className='contact-text'>
       
