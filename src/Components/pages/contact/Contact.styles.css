@@ -1,0 +1,21 @@
+.contact-text{
+    background-color: pink;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 0.5px solid  darkgray;
+    padding: 50px;
+    display:flex;
+    flex-direction: column;
+    margin: 100px;
+    
+}
+
+.contact-text strong{
+    color:rgb(87, 8, 87);
+    font-size: 22px;
+}
+
+.contact-text p{
+    color: rgb(189, 37, 189);
+    text-shadow: -1px 1px 10px rgba(0, 0, 0, 0.3)
+}

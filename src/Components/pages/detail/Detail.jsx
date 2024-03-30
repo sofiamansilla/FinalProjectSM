@@ -24,43 +24,52 @@ export const Detail = () => {
 
 
   return (
-    <div className='dentist-information'>
-      <strong>Nombre: 
-        <span>
-          {dentistSelected.name}
-        </span>
-      </strong>
+    <div className='detail-card'>
+      <div className='detail-container'>
+        <div className='info-container'>
+          <strong>Nombre:
+            <br/> 
+            <span>
+              {dentistSelected.name}
+            </span>
+          </strong>
 
-      <strong>Sitio web: 
-        <span>
-          {dentistSelected.website}
-        </span>
-      </strong>
-      
-      <strong>Email:  
-        <span>
-          {dentistSelected.email}
-        </span>
-      </strong>
-      
-      <strong>Telefono: 
-        <span>
-          {dentistSelected.phone}
-        </span>
-      </strong>
-      
-      <strong>Ciudad: 
-        <span>
-          {dentistSelected.address.city}
-        </span>
-      </strong> 
-      
-      <strong>Compañia: 
-        <span>
-          {dentistSelected.company.name}
-        </span>
-      </strong>
-
-    </div>    
+          <strong>Sitio web:
+            <br/> 
+            <span>
+              {dentistSelected.website}
+            </span>
+          </strong>
+          
+          <strong>Email: 
+            <br/> 
+            <span>
+              {dentistSelected.email}
+            </span>
+          </strong>
+          
+          <strong>Telefono: 
+            <br/>
+            <span>
+              {dentistSelected.phone}
+            </span>
+          </strong>
+          
+          <strong>Ciudad: 
+            <br/>
+            <span>
+              {dentistSelected.address.city}
+            </span>
+          </strong> 
+          
+          <strong>Compañia: 
+            <br/>
+            <span>
+              {dentistSelected.company.name}
+            </span>
+          </strong>
+        </div>
+      </div>    
+    </div>
   );
 };

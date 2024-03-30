@@ -6,10 +6,12 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    min-width: 100%;
     background-color: bisque;
 };
 
 .layout-body{
   display: flex;
   justify-content: center;
+  width: 100%;
 }

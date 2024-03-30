@@ -1,5 +1,47 @@
-.material-symbols-outlined {
-    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
-    color: yellow
-  }
 
+.detail-card{
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+
+}
+
+
+
+.detail-container{
+  display: flex;
+  background-color: palevioletred;
+  flex-direction: column;
+  width: 600px;
+  padding: 30px;
+  border: 0.5px solid  darkgray;
+  border-radius: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.detail-container .info-container{
+  padding: 10px;
+  background-color: #e9acc0;
+  border-radius: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ 
+.detail-container .info-container strong{
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(68, 18, 70);
+    padding: 10px;
+    text-shadow: -1px 1px 10px rgba(0, 0, 0, 0.5)
+}
+
+.detail-container .info-container span{
+    font-size: 16px;
+    font-style: italic;
+    text-align: center;
+    color: rgb(197, 50, 160);
+}

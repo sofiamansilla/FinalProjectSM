@@ -1,15 +1,17 @@
 import React from 'react'
 import { Form } from '../../common/form/Form'
+import "./Contact.styles.css"
 
-
-
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
+/**
+ * 
+ * @return {ReactComponent} Componente que despliega un formulario  de contacto con campos para el nombre y email
+ */
 
 export const Contact = () => {
   return (
-    <div>
-      <h2>Want to know more?</h2>
-      <p>Send us your questions and we will contact you</p>
+    <div className='contact-text'>
+      <strong>¿Necesitas más información?</strong>
+      <p>Ingresa tus datos y te escribiremos lo más pronto posible</p>
 
       <Form/>
 
