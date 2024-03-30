@@ -1,0 +1,18 @@
+.footer{
+  margin-top: auto;
+  background-color: purple;
+  padding: 10px;
+  display: flex;
+  .icono-DH{
+    width: 120px;
+  }
+  .footer-social{
+    margin-left: auto;
+    .icono{
+      margin: 5px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+};
+

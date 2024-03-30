@@ -3,38 +3,34 @@ import {
   useContext, 
   useReducer, 
   useEffect,
-  useState, 
 }  from "react";
-// import {DentistReducer} from  './reducers/DentistReducer;
 
+const DentistStates = createContext()
 
-export const DentistStates = createContext(undefined);
+let initialState = {
+    favs: [],
+    darkMode: false
+}
 
-// export const initialState = {
-//   theme: "", 
-//   data: []
-// }
+const dentistReducer = (state, action)=>{
 
-// /**
-//  * @return {React.Component} Return the provider component with a value of the global state and dispatch function.
-//  */
+    switch(action.type){
+        case "ADD_FAVORITE":
+            return {...state, favs: [ ...state.favs, action.payload ]}
 
-export const DentistContext = ({ children }) => {
-const [favs, setFavs] = useState([])
-console.log(favs);
-//   {const [state, dispatch] = 
-//     useReducer(DentistReducer, initialState);
-//     useEffect(()=> 
-//     { localStorage.setItem
-//       ('data' , JSON.stringify(state.data));
-//     },[state.data]);
-  
-    return (
-    <DentistStates.Provider 
-      value={{favs, setFavs}}>
-        {children}
-    </DentistStates.Provider>
-  );
-};
+        case "CHANGUE_MODE":
+        case  "REMOVE_FAVORITE":
+    }
+}
 
-export const useDentistStates =()=> useContext(DentistStates) ;
+export const DentistContext = ({children}) =>{
+    const [state, dispatch] = useReducer(dentistReducer, initialState)
+
+    let data = {state, dispatch}
+    return(
+        <DentistStates.Provider value={data}>
+            {children}
+        </DentistStates.Provider>
+    )
+}
+export const useDentistStates = () => useContext(DentistStates);
