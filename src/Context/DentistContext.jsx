@@ -15,11 +15,18 @@ let initialState = {
 const dentistReducer = (state, action)=>{
 
     switch(action.type){
+
         case "ADD_FAVORITE":
             return {...state, favs: [ ...state.favs, action.payload ]}
 
         case "CHANGUE_MODE":
+            return {...state, darkMode: !state.darkMode}
+        
         case  "REMOVE_FAVORITE":
+            return{}
+        
+        default:
+            return state
     }
 }
 

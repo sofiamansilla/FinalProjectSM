@@ -1,0 +1,20 @@
+.favorites{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.favorites h1{
+    text-align: center;
+}
+
+.container-cards{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 30px;
+}

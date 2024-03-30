@@ -3,31 +3,61 @@
     background-color: purple;
     padding: 10px;
     display: flex;
-    ul {
-        list-style: none;
-        display: flex;
-        padding-left: 0;
-        li{
-            border-right: 1px dashed aliceblue;
-            &:hover{
-                background-color: rgb(153, 81, 172);
-            }
-            &:last-child{
-                border-right: 0;
-            }
-            a{
-                color:aliceblue;
-                text-decoration: none;
-                padding: 10px 20px;
-                &:hover{
-                    color: #61bcd8;
-                }
-            }
-        }
-    }
+}
 
-    button{
-        margin-left: auto;
-        padding: 5px;
-    }
-};
+.navbar ul{
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+}
+
+.navbar ul li{
+    border-right: 1px dashed aliceblue;
+}
+
+.navbar ul li:hover{
+    background-color: rgb(153, 81, 172);
+}
+
+.navbar ul li:last-child{
+    border-right: 0;
+}
+
+.navbar ul li a{
+    color:aliceblue;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.navbar ul li a:hover{
+    color: #61bcd8;
+}
+button{
+    margin-left: auto;
+    padding: 5px;
+}
+
+.navbar.dark{
+    background-color: #666;
+}
+
+.navbar.dark ul li{
+    border-right: 1px dashed rgb(201, 200, 200);
+}
+
+.navbar.dark ul li:hover{
+    background-color: #3d3535;
+}
+
+.navbar.dark ul li:last-child{
+    border-right: 0;
+}
+
+.navbar.dark ul li a{
+    color: #ccc;
+}
+
+
+.navbar.dark ul li a:hover{
+    color: #726b6b;
+}
