@@ -1,5 +1,4 @@
 import React from "react";
-import { ButtonReturnHome } from "../../common/buttonReturnHome";
 import { DentistCard } from "../../common/dentistCard/DentistCard";
 import { useDentistStates } from "../../../Context";
 import "./favs.styles.css";
@@ -15,12 +14,11 @@ export const Favs = () => {
         {
           state.favs.map((dentist)=>{
             return(
-              <DentistCard dentist={dentist} key={dentist.id}/>
+              <DentistCard dentist={dentist} remove={true} key={dentist.id}/>
             )
           })
         }
       </div>
-      <ButtonReturnHome/>
     </div>
   )
 }

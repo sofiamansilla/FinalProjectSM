@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import {useParams} from "react-router-dom";
-import { ButtonReturnHome } from '../../common'
 import { getDentistById } from '../../../services';
+import './Detail.styles.css'
 
 
 
@@ -24,30 +24,43 @@ export const Detail = () => {
 
 
   return (
-    <>
-      <h1>Nombre: 
-        {dentistSelected.name}
-      </h1>
-      <h2>Sitio web: 
-        {dentistSelected.website}
-      </h2>
-      <h2>Email:  
-        {dentistSelected.email}
-      </h2>
-      <h2>Telefono: 
-        {dentistSelected.phone}
-      </h2>
-      <h2>Ciudad: 
-        {dentistSelected.address.city}
-      </h2>  
-      <h2>Compañia: 
-        {dentistSelected.company.name}
-      </h2>
+    <div className='dentist-information'>
+      <strong>Nombre: 
+        <span>
+          {dentistSelected.name}
+        </span>
+      </strong>
+
+      <strong>Sitio web: 
+        <span>
+          {dentistSelected.website}
+        </span>
+      </strong>
       
-    <ButtonReturnHome/>
+      <strong>Email:  
+        <span>
+          {dentistSelected.email}
+        </span>
+      </strong>
+      
+      <strong>Telefono: 
+        <span>
+          {dentistSelected.phone}
+        </span>
+      </strong>
+      
+      <strong>Ciudad: 
+        <span>
+          {dentistSelected.address.city}
+        </span>
+      </strong> 
+      
+      <strong>Compañia: 
+        <span>
+          {dentistSelected.company.name}
+        </span>
+      </strong>
 
-    </>
-
-    
-  )
-}
+    </div>    
+  );
+};

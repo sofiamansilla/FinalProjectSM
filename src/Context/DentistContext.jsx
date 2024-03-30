@@ -6,9 +6,10 @@ import {
 }  from "react";
 
 const DentistStates = createContext()
+const lsFavs = JSON.parse(localStorage.getItem('favs'))
 
 let initialState = {
-    favs: [],
+    favs: lsFavs ||[],
     darkMode: false
 }
 
@@ -17,13 +18,24 @@ const dentistReducer = (state, action)=>{
     switch(action.type){
 
         case "ADD_FAVORITE":
+            const fav = state.favs.find((fav)=> action.payload.id === fav.id)
+            if (fav) {
+                return state;
+            }
             return {...state, favs: [ ...state.favs, action.payload ]}
+
+        case  "REMOVE_FAVORITE":
+            let index = 0;
+            state.favs.forEach((fav, i) => {
+                if (fav.id === action.payload.id) {
+                    index = i;
+                }
+            })
+            state.favs.splice(index,1);
+            return{...state, favs: [ ...state.favs]} 
 
         case "CHANGUE_MODE":
             return {...state, darkMode: !state.darkMode}
-        
-        case  "REMOVE_FAVORITE":
-            return{}
         
         default:
             return state
@@ -33,7 +45,12 @@ const dentistReducer = (state, action)=>{
 export const DentistContext = ({children}) =>{
     const [state, dispatch] = useReducer(dentistReducer, initialState)
 
-    let data = {state, dispatch}
+    let data = {state, dispatch};
+
+    useEffect(()=>{
+        localStorage.setItem('favs', JSON.stringify(state.favs))
+    }, [state.favs])
+    
     return(
         <DentistStates.Provider value={data}>
             {children}

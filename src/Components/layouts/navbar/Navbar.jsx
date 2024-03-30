@@ -7,13 +7,10 @@ import { useDentistStates } from '../../../Context/DentistContext'
 
 export const Navbar = () => {
 
-  const {state, dispatch} = useDentistStates()
-
-  let darkModeClass = state.darkMode ? "navbar dark" : "navbar";
-console.log(darkModeClass);
+const {state, dispatch} = useDentistStates()
 
   return ( 
-   <nav className={darkModeClass}>
+   <nav className={"navbar"}>
 
         <ul>
           

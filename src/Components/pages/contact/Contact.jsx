@@ -1,6 +1,6 @@
 import React from 'react'
 import { Form } from '../../common/form/Form'
-import { ButtonReturnHome } from '../../common/buttonReturnHome'
+
 
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
@@ -13,7 +13,6 @@ export const Contact = () => {
 
       <Form/>
 
-      <ButtonReturnHome/>
 
     </div>
   )

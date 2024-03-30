@@ -7,12 +7,20 @@ import { useDentistStates } from "../../../Context";
 /**
  * @return {React.Component}  Componente que muestra la card del dentista con los atributos nombre, nombre de usuario e id
  */
-export const DentistCard = ({dentist}) => {
+export const DentistCard = ({dentist, remove}) => {
  
   const {state, dispatch} = useDentistStates();
+  
   const onClickFavHandler=()=>{
     dispatch ({
       type:"ADD_FAVORITE",
+      payload: dentist
+    })
+  }
+
+  const onClickRemoveHandler=()=>{
+    dispatch ({
+      type:"REMOVE_FAVORITE",
       payload: dentist
     })
   }
@@ -26,10 +34,19 @@ export const DentistCard = ({dentist}) => {
           src="/images/doctor.jpg"  alt={`Foto de ${dentist.name}`}
         />
         
-        <img onClick={onClickFavHandler} className="icon-favs"
-          src="/images/ico-star.png" 
-          alt="Agregar a favoritos" 
-        />
+        {
+          remove === true ? 
+            <img 
+              onClick={onClickRemoveHandler} className="icon-remove"
+              src="/images/ico-remove.png" 
+              alt="Quitar de favoritos" 
+            /> :
+            <img 
+              onClick={onClickFavHandler} className="icon-favs"
+              src="/images/ico-star.png" 
+              alt="Agregar a favoritos" 
+            />
+        }
       </div>
     
       <div  className="info-container">

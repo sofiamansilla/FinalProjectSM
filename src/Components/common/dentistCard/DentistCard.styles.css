@@ -1,5 +1,4 @@
 .dentistCard-component{
-
   display: flex;
   background-color: palevioletred;
   flex-direction: column;
@@ -10,19 +9,34 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.image-container{
+.dentistCard-component .image-container {
   position: relative;
   display: flex;
 }
 
-.icon-favs{
+.dentistCard-component .image-container .icon-favs{
   width: 40px;
   position: absolute;
   top: -16px;
   right: -7px;
+  cursor: pointer;
 }
 
-.info-container{
+.dentistCard-component .image-container .icon-remove{
+  width: 40px;
+  position: absolute;
+  top: -14px;
+  right: -6px;
+  cursor: pointer;
+}
+
+.dentistCard-component img{
+  width: 150px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.dentistCard-component .info-container{
   padding: 10px;
   background-color: #e9acc0;
   border-radius: 10px;
@@ -31,35 +45,35 @@
   flex-direction: column;
   align-items: center;
 }
-
-.dentist-name{
-  font-size: 18px;
-  font-weight: bold;
-  text-align: center;
+ 
+.dentistCard-component .info-container .dentist-name{
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
 }
 
-.dentist-username{
-  font-size: 16px;
-  font-style: italic;
-  text-align: center;
+.dentistCard-component .info-container .dentist-username{
+    font-size: 16px;
+    font-style: italic;
+    text-align: center;
 }
 
-.dentistCard-footer{
+.dentistCard-component .dentistCard-footer{
   margin-top: auto;
 }
 
-.dentistCard-footer button{
+.dentistCard-component .dentistCard-footer button{
   border-radius: 10px;
   background-color: rgb(173, 97, 173);
   color: aliceblue;
   font-weight: bold;
   font-size: 14px;
   padding: 5px;
+  cursor: pointer;
 }
 
 .dentistCard-component img{
   width: 150px;
   margin: 0 auto;
   border-radius: 10px;
-
 }

@@ -37,27 +37,27 @@ button{
     padding: 5px;
 }
 
-.navbar.dark{
+.layout-dark .navbar{
     background-color: #666;
 }
 
-.navbar.dark ul li{
+.layout-dark .navbar ul li{
     border-right: 1px dashed rgb(201, 200, 200);
 }
 
-.navbar.dark ul li:hover{
+.layout-dark .navbar ul li:hover{
     background-color: #3d3535;
 }
 
-.navbar.dark ul li:last-child{
+.layout-dark .navbar ul li:last-child{
     border-right: 0;
 }
 
-.navbar.dark ul li a{
+.layout-dark .navbar ul li a{
     color: #ccc;
 }
 
 
-.navbar.dark ul li a:hover{
+.layout-dark .navbar ul li a:hover{
     color: #726b6b;
 }

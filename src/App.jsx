@@ -29,10 +29,10 @@ function App() {
           <Route  path="/Contact" element={<Contact/>}/>
           <Route  path="/Dentist/:id" element={<Detail/>}/>
           <Route  path="/Favs" element={<Favs/>}/>
-        
+          <Route  path="*" element={<NotFound/>}/>
         </Route>
     
-          <Route  path="*" element={<NotFound/>}/>
+        
         
       </Routes>
     </DentistContext>

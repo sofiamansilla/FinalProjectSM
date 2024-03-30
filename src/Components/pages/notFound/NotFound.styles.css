@@ -3,20 +3,9 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: #f3f3f3;
   }
   
   .not-found img {
     width: 100%;
   }
-
-  .button--return-home {
-    position: absolute; 
-    top: 20px; 
-    right: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
